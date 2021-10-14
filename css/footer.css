@@ -1,0 +1,58 @@
+footer{
+    width: 1200px;
+    margin: 20px auto;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+}
+footer .phone{
+    width: 30%;
+    font-size: 2em;
+}
+footer .city{
+    width: 30%;
+    font-size: 2em;
+}   
+footer .social{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .social a{
+    padding: 15px;
+}
+footer .social a i{
+    transform: scale(2);
+    color: whitesmoke;
+    transition: .5s;
+}
+footer .social a:hover i{
+    color: gray;
+}
+
+@media screen and ( max-device-width: 1300px) {
+    footer{
+        width: 1300px;
+        font-size: 1.3em;
+    }
+}
+@media screen and ( max-device-width: 400px) {
+    footer{
+        min-height: 250px;
+        flex-flow: row wrap;
+        font-size: 2.1em;
+    }
+    footer .phone{
+        width: 100%;
+    }
+    footer .city{
+        width: 100%;
+    }
+    footer .social{
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,475 @@
+main{
+    width: 100%;
+    min-height: 250px;
+}
+.slider{
+    width: 100%;
+    position: relative;
+    height: 700px;
+}
+.slider .slide{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.slider button{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(24, 24, 24, 0.75);
+    border: 1px solid black;    
+    visibility: visible;
+    transition: .3s;
+    
+}
+.slider button:hover,
+.slider button:focus,
+.slider button:active{
+    cursor: pointer;
+    box-shadow:inset 0 0 5px 5px gray;
+}
+.slider button:active{
+    box-shadow:inset 0 0 5px 5px #F0620E;
+}
+.slider button i{
+    transform: scale(3.5) translate(0);
+    color:#F0620E;
+}
+#sliderNext i{
+    animation: left_arrow 5s ease-in-out infinite;
+}
+#sliderPrev i{
+    animation: right_arrow 5s ease-in-out infinite;
+}
+@keyframes left_arrow{
+    60%{
+        transform: scale(3.5) translate(0px);
+    }
+    70%{
+        transform: scale(3.5) translate(3px);
+    }
+    80%{
+        transform: scale(3.5) translate(0px);
+    }
+    90%{
+        transform: scale(3.5) translate(3px);
+    }
+    100%{
+        transform: scale(3.5) translate(0px);
+    }
+}
+@keyframes right_arrow{
+    60%{
+        transform: scale(3.5) translate(0px);
+    }
+    70%{
+        transform: scale(3.5) translate(-3px);
+    }
+    80%{
+        transform: scale(3.5) translate(0px);
+    }
+    90%{
+        transform: scale(3.5) translate(-3px);
+    }
+    100%{
+        transform: scale(3.5) translate(0px);
+    }
+}
+.slider #sliderPrev{
+    top:50%;
+    left: 25px;
+    z-index: 5;
+}
+.slider #sliderNext{
+    top:50%;
+    right: 25px;
+    z-index: 5;
+}
+.slider .slide1{
+    background: url('http://cdn.home-designing.com/wp-content/uploads/2016/10/Chrome-features-kitchen-all-black-panelling-concrete-floor.jpg') 0 center/cover no-repeat;
+    opacity: 0;
+}
+.slider .slide2{
+    background: url('http://cdn.home-designing.com/wp-content/uploads/2016/10/Pastels-kitchen-mint-green-central-panel-low-hanging-white-light-black-surrounds.jpg')0 center/cover no-repeat;
+    opacity: 0;
+}
+.slider .slide3{
+    background: url('https://s3-ap-southeast-1.amazonaws.com/atap-main/gallery-full/04c63708-98d0-41bf-860a-ba60f44d21c5/dark-aesthetic-semi-d-taman-melawati.jpg')0 center/cover no-repeat;
+}
+.slider .discount img{
+    width: 640px;
+    height: 280px;
+    margin: 0 0 0 150px;
+    box-shadow:
+    0 0 10px 10px rgba(250, 250, 250, 0.55);
+}
+.slider a{
+    border: 1px solid #F0620E;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg,#F0620E 50%, yellow 50%);
+    background-position: 0;
+    background-size: 300%;
+    transition: .6s;
+    margin:0 150px 0 150px;
+    width: 250px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    color: white;
+    font-size: 3em;
+}
+.slider a:hover {
+    color: black;
+    background-position: 100%;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 1) inset;
+}
+
+.main-content{
+    width: 100%;
+    min-height: 1000px;
+    margin: 20px auto;
+    background: url('../img/bg-content.jpg') center 0/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.main-content .aboutUs{
+    width: 1300px;
+    min-height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    position: absolute;
+    top:-200px;
+    z-index: 6;
+}
+.aboutUs .about{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 20%;
+    min-height: 500px;
+    transition: .5s;
+    animation: scaleAb 5s ease-in-out infinite;
+}
+.about .image{
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 5px 10px rgba(254, 254, 254, 0.25);
+    transition: .5s;
+}
+.about .kitchen-name{
+    margin: 5px 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    height: 60px;
+}
+.about .line{
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to left, #2C2C2C, #A54A14, #2C2C2C);
+    transition: .5s;
+}
+.about .text{
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    color: grey;
+    min-height: 61px;
+    height: 150px;
+}
+
+.about a {
+    margin: 0 0 25px 0;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #F0620E;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.about a:hover {
+    color: #255784;
+    background: #F0620E;
+    box-shadow: 0 0 10px #F0620E, 0 0 40px #F0620E, 0 0 80px #F0620E;
+    transition-delay: 0.2s;
+}
+.about a span {
+    position: absolute;
+    display: block;
+}
+.about span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#F0620E);
+}
+.about a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.about span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#F0620E);
+}
+.about a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.about span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#F0620E);
+}
+.about a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.about span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#F0620E);
+}
+.about a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.about button:hover{
+    box-shadow: 0 0 0 2px #D2973D inset, 0 0 0 4px white inset;
+    cursor: pointer;
+}
+.about1 .image{
+    background: url('../img/practic.jpg') center 0/cover no-repeat;
+}
+.about2 .image{
+    background: url('../img/protect.jpg') center 0/cover no-repeat;
+}
+.about3 .image{
+    background: url('../img/avaliable.jpg') center 0/cover no-repeat;
+}
+.about4 .image{
+    background: url('../img/easy.jpeg') center 0/cover no-repeat;
+}
+.about:hover{
+    transform: scale(1.2);
+    z-index: 5;
+    box-shadow: 0 0 5px 10px black;
+}
+.about:hover .image{
+    box-shadow:0 0 0 0;
+}
+.about:hover .line{
+    width: 100%;
+}
+
+#discount{
+    width: 1200px;
+    height: 550px;
+    position: absolute;
+    border-radius: 20px;
+    top:43%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    box-shadow:
+    inset rgba(0,0,0,.5) -3px -3px 8px,
+    inset rgba(255,255,255,.9) 3px 3px 8px,
+    rgba(0,0,0,.8) 3px 3px 8px -3px;
+}
+#discount h2{
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 3em;
+}
+form{
+    background-color: #222224;
+    min-height: 50px;
+}
+#discount input{
+    display: block;
+    width: 400px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    margin: 10px 0 0 0;
+    
+    font-size: 1.4em;
+}
+#discount textarea{
+    width: 800px;
+    height: 150px;
+    font-size: 2em;
+    border-radius: 20px;
+}
+#discount input[type="submit"]{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #F8A777;
+    border-bottom: 4px solid #A54A14;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+}
+
+#opinions{
+    width: 1200px;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap row;
+}
+#opinions .opinion{
+    width: 48%;
+    height: 140px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: #222224;
+    box-shadow: -20px 20px 0 -17px #333333,
+    20px -20px 0 -17px #333333,
+    20px 20px 0 -20px #A54A14,
+    0 0 0 2px #A54A14;
+}
+.opinion .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: darkblue;
+    margin:0 0 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+    position: relative;
+}
+.avatar .name{
+    height: 20px;
+    color:white;
+    position: absolute;
+    bottom: -15px;
+    font-size: 2em;
+}
+.opinion2 .avatar,
+.opinion4 .avatar{
+    background: url('../img/avatar1.png') center 0/cover no-repeat;
+}
+.opinion1 .avatar,
+.opinion3 .avatar{
+    background: url('../img/avatar2.png') center 0/cover no-repeat;
+}
+.opinion .line{
+    width: 120px;
+    transform: rotate(90deg);
+    height: 3px;
+    background: linear-gradient(to left, #2C2C2C, #A54A14, #2C2C2C);
+    transition: .5s;
+}
+.opinion .text{
+    width: 350px;
+    height: 100px;
+    color: whitesmoke;
+    font-size: 1.3em;
+}
+
+
+
+@media screen and ( max-device-width: 1300px) {
+    main{
+        width: 1300px;
+    }
+}
+@media screen and ( max-device-width: 700px) {
+    #discount{
+        width: 1200px;
+        min-height: 100px;
+    }
+    #discount input{
+        width: 80%;
+        height: 50px;
+        font-size: 2em;
+    }
+    #discount textarea{
+        width: 80%;
+        margin-top: 10px;
+        height: 100px;
+        font-size: 3em;
+    }
+    #discount input[type="submit"]{
+        font-size: 3em;
+        width: 40%;
+        height: 75px;
+    }
+    #opinions{
+        justify-content: center;
+        width: 1300px;
+        min-height: 500px;
+        flex-flow: wrap row;
+    }
+    #opinions .opinion{
+        margin-bottom: 50px;
+        width: 90%;
+        min-height: 390px;
+    }
+    #opinions .avatar{
+        width: 300px;
+        height: 300px;
+    }
+    .avatar .name{
+        font-size: 3em;
+    }
+    .opinion .text{
+        width: 780px;
+        font-size: 3em;
+        min-height: 280px;
+    }
+    .aboutUs .about3,
+    .aboutUs .about4{
+        display: none;
+    }
+    .aboutUs .about1,
+    .aboutUs .about2{
+        width: 40%;
+    }
+    .about .image{
+        height: 300px;
+    }
+    .about .kitchen-name{
+        font-size: 2.5em;
+        margin: 20px 0;
+    }
+    .about .text{
+        font-size: 2em;
+    }
+}
